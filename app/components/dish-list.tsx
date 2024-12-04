@@ -4,21 +4,25 @@ import { Input } from "@/components/ui/input";
 import { Menu } from "@/lib/menu";
 import { DishInfo, DishName } from "@/types/dish";
 import Image from "next/image";
-import { useState } from "react";
+import { MutableRefObject, useState } from "react";
 
 type DishListProps = {
-    open: boolean;
+    searchRef: MutableRefObject<HTMLInputElement | null>;
     handleDishClick: (dn: DishName, di: DishInfo) => void;
 };
 
-export function DishList({ open, handleDishClick }: DishListProps) {
+export function DishList({ searchRef, handleDishClick }: DishListProps) {
     const [searchTerm, setSearchTerm] = useState("");
-
     return (
         <>
-            {open && (
-                <Input type="search" placeholder="Искать..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="mb-4" />
-            )}
+            <Input
+                ref={searchRef}
+                type="search"
+                placeholder="Искать..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="mb-4"
+            />
             <ul className="space-y-6">
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {

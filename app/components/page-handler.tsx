@@ -1,7 +1,7 @@
 "use client";
 
 import { FloatingNavMenu } from "@/components/floating-nav-menu";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { DishList } from "./dish-list";
 import { DishInfo, DishName } from "@/types/dish";
 import { DishView } from "./dish-view";
@@ -14,32 +14,41 @@ export function PageHandler() {
     };
 
     const handleGoForward = () => {
-        setPage((p) => (p - 1 <= -1 ? p : p - 1));
+        if (!dish) return;
+        setPage((p) => (p - 1 <= 0 ? p : p - 1));
     };
 
     const [dish, setDish] = useState<[DishName, DishInfo] | null>(null);
-    const [open, setOpen] = useState<boolean>(false);
 
     const handleDishClick = (dn: DishName, di: DishInfo) => {
         setDish([dn, di]);
         handleGoForward();
     };
 
-    const handleOpen = () => {
-        setOpen((p) => !p);
+    const handleManual = (n: number) => {
+        setPage(n);
     };
+
+    const focusSearch = () => {
+        divRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+        searchRef.current?.focus();
+    };
+
+    const divRef = useRef<HTMLDivElement | null>(null);
+    const searchRef = useRef<HTMLInputElement | null>(null);
 
     return (
         <main className={`grid min-h-screen grid-cols-[100vw] overflow-hidden`}>
             <div className="w-full h-full relative">
                 <div
                     className="h-full w-full absolute transition-transform translate-x-[0%] overflow-y-scroll"
+                    ref={divRef}
                     style={{
                         transform: `translateX(${(page - 2) * 100}%)`,
                     }}
                 >
                     <div className="container mx-auto p-4">
-                        <DishList open={open} handleDishClick={handleDishClick} />
+                        <DishList searchRef={searchRef} handleDishClick={handleDishClick} />
                     </div>
                 </div>
                 <div
@@ -51,7 +60,7 @@ export function PageHandler() {
                     {dish && <DishView dish={dish} />}
                 </div>
             </div>
-            <FloatingNavMenu handleGoBack={handleGoBack} handleGoForward={handleGoForward} handleOpen={handleOpen} />
+            <FloatingNavMenu handleGoBack={handleGoBack} handleGoForward={handleGoForward} handleManual={handleManual} focusSearch={focusSearch} />
         </main>
     );
 }

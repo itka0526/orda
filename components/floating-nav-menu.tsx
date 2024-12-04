@@ -6,24 +6,26 @@ import { Button } from "@/components/ui/button";
 type FloatingNavMenuProps = {
     handleGoBack: () => void;
     handleGoForward: () => void;
-    handleOpen: () => void;
+    handleManual: (n: number) => void;
+    focusSearch: () => void;
 };
 
-export function FloatingNavMenu({ handleGoBack, handleGoForward, handleOpen }: FloatingNavMenuProps) {
+export function FloatingNavMenu({ handleGoBack, handleGoForward, handleManual, focusSearch }: FloatingNavMenuProps) {
     const handleSearch = () => {
-        handleOpen();
+        handleManual(2);
+        focusSearch();
     };
 
     return (
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full shadow-lg p-2 flex items-center space-x-2">
-            <Button variant="ghost" size="icon" onClick={handleGoBack} aria-label="Go back">
-                <ArrowLeft className="h-6 w-6" />
+            <Button variant="ghost" size="icon" onClick={handleGoBack} aria-label="Go back" className="rounded-full">
+                <ArrowLeft className="h-8 w-8" />
             </Button>
-            <Button variant="ghost" size="icon" onClick={handleGoForward} aria-label="Go forward">
-                <ArrowRight className="h-6 w-6" />
+            <Button variant="ghost" size="icon" onClick={handleGoForward} aria-label="Go forward" className="rounded-full">
+                <ArrowRight className="h-8 w-8" />
             </Button>
-            <Button variant="ghost" size="icon" onClick={handleSearch} aria-label="Search">
-                <Search className="h-6 w-6" />
+            <Button variant="ghost" size="icon" onClick={handleSearch} aria-label="Search" className="rounded-full">
+                <Search className="h-8 w-8" />
             </Button>
         </div>
     );
