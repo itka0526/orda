@@ -19,13 +19,13 @@ export function FloatingNavMenu({ handleGoBack, handleGoForward, handleManual, f
     return (
         <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full shadow-lg p-2 flex items-center space-x-2">
             <Button variant="ghost" size="icon" onClick={handleGoBack} aria-label="Go back" className="rounded-full">
-                <ArrowLeft className="h-16 w-1h-16" />
+                <ArrowLeft className="h-16 w-16" />
             </Button>
             <Button variant="ghost" size="icon" onClick={handleGoForward} aria-label="Go forward" className="rounded-full">
-                <ArrowRight className="h-16 w-1h-16" />
+                <ArrowRight className="h-16 w-16" />
             </Button>
             <Button variant="ghost" size="icon" onClick={handleSearch} aria-label="Search" className="rounded-full">
-                <Search className="h-16 w-1h-16" />
+                <Search className="h-16 w-16" />
             </Button>
         </div>
     );

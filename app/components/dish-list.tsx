@@ -26,12 +26,13 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
             <ul className="space-y-6">
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {
+                        let n = dn.toLowerCase();
+                        let s = searchTerm.toLowerCase();
                         return (
-                            dn
-                                .toLowerCase()
-                                .split(" ")
-                                .some((k) => k.startsWith(searchTerm.toLowerCase())) ||
-                            di.ingredients.some((ingredient) => ingredient.toLowerCase().startsWith(searchTerm.toLowerCase()))
+                            n.includes(s) ||
+                            n.startsWith(s) ||
+                            n.split(" ").some((k) => k.startsWith(s)) ||
+                            di.ingredients.some((ingredient) => ingredient.toLowerCase().startsWith(s))
                         );
                     })
                     .map(([name, info]) => (
