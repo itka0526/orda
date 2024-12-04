@@ -26,8 +26,8 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
             <ul className="space-y-6">
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {
-                        let n = dn.toLowerCase();
-                        let s = searchTerm.toLowerCase();
+                        const n = dn.toLowerCase();
+                        const s = searchTerm.toLowerCase();
                         return (
                             n.includes(s) ||
                             n.startsWith(s) ||
