@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with tomato sauce, mozzarella, and basil",
+    "price": 12.99,
+    "image": "/placeholder.svg?height=96&width=96",
+    "ingredients": ["tomato sauce", "mozzarella", "basil"],
+    "preparationTime": 15,
+    "weight": 350
+  },
+  {
+    "id": "2",
+    "name": "Spaghetti Carbonara",
+    "description": "Creamy pasta with pancetta, eggs, and Parmesan cheese",
+    "price": 14.99,
+    "image": "/placeholder.svg?height=96&width=96",
+    "ingredients": ["spaghetti", "pancetta", "eggs", "Parmesan cheese"],
+    "preparationTime": 20,
+    "weight": 400
+  },
+  {
+    "id": "3",
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce with Caesar dressing and croutons",
+    "price": 9.99,
+    "image": "/placeholder.svg?height=96&width=96",
+    "ingredients": ["romaine lettuce", "Caesar dressing", "croutons", "Parmesan cheese"],
+    "preparationTime": 10,
+    "weight": 300
+  },
+  {
+    "id": "4",
+    "name": "Grilled Salmon",
+    "description": "Fresh salmon fillet with lemon butter sauce and vegetables",
+    "price": 18.99,
+    "image": "/placeholder.svg?height=96&width=96",
+    "ingredients": ["salmon", "lemon", "butter", "mixed vegetables"],
+    "preparationTime": 25,
+    "weight": 450
+  }
+]
+
