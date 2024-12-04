@@ -27,13 +27,9 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {
                         const n = dn.toLowerCase();
+                        const d = di.description.toLowerCase();
                         const s = searchTerm.toLowerCase();
-                        return (
-                            n.includes(s) ||
-                            n.startsWith(s) ||
-                            n.split(" ").some((k) => k.startsWith(s)) ||
-                            di.ingredients.some((ingredient) => ingredient.toLowerCase().startsWith(s))
-                        );
+                        return n.includes(s) || d.includes(s) || di.ingredients.some((ingredient) => ingredient.toLowerCase().startsWith(s));
                     })
                     .map(([name, info]) => (
                         <li
