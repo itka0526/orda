@@ -17,19 +17,14 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
     const [searchTerm, setSearchTerm] = useState("");
     return (
         <>
-            <div className="relative" onClick={() => searchRef.current?.focus()}>
-                <Input
-                    ref={searchRef}
-                    type="search"
-                    placeholder="Искать..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="mb-4"
-                />
-                <Button variant={"secondary"} className="absolute right-4 top-1/2 -translate-y-1/2 h-3/4" onClick={() => setSearchTerm("")}>
-                    <Trash />
-                </Button>
-            </div>
+            <Input
+                ref={searchRef}
+                type="search"
+                placeholder="Искать..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="mb-4"
+            />
             <ul className="space-y-6">
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {
