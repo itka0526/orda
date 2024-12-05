@@ -17,7 +17,7 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
     const [searchTerm, setSearchTerm] = useState("");
     return (
         <>
-            <div className="relative">
+            <div className="relative" onClick={() => searchRef.current?.focus()}>
                 <Input
                     ref={searchRef}
                     type="search"
