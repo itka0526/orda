@@ -1,10 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Menu } from "@/lib/menu";
 import { DishInfo, DishName } from "@/types/dish";
-import { Trash } from "lucide-react";
 import Image from "next/image";
 import { MutableRefObject, useState } from "react";
 
