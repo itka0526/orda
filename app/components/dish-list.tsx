@@ -36,7 +36,7 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
                         const s = searchTerm.toLowerCase();
                         if (s.startsWith("#")) {
                             const t = di.tags;
-                            return di.tags?.some((tag) => tag.includes(s.slice(1)));
+                            return t?.some((tag) => tag.includes(s.slice(1)));
                         } else {
                             const n = dn.toLowerCase();
                             const d = di.description.toLowerCase();
