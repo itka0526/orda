@@ -52,7 +52,7 @@ export function PageHandler() {
                     </div>
                 </div>
                 <div
-                    className="h-full w-full absolute transition-transform  "
+                    className="h-full w-full absolute transition-transform overflow-y-auto"
                     style={{
                         transform: `translateX(${(page - 1) * 100}%)`,
                     }}

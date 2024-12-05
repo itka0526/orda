@@ -4,6 +4,8 @@ export type DishInfo = {
     description: string;
     ingredients: string[];
     ETP: number;
+    image?: string;
+    tags?: string[];
 };
 
 export type DishName = string;

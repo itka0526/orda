@@ -6,17 +6,15 @@ import { DishInfo, DishName } from "@/types/dish";
 
 export function DishView({ dish: [dn, di] }: { dish: [DishName, DishInfo] }) {
     return (
-        <div className="container mx-auto p-4">
-            <Card className="overflow-hidden min-h-[70vh]">
+        <div className="container mx-auto p-4 ">
+            <Card className="min-h-[70vh]">
                 <CardHeader>
                     <CardTitle>{dn}</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="grid gap-4 md:grid-cols-2">
-                        <div className="relative h-64 md:h-full">
-                            <Image src={"/logo.png"} alt={dn} fill className="object-cover rounded-md" />
-                        </div>
-                        <div className="space-y-4">
+                        <Image src={di.image ?? "/logo.png"} alt={dn} height={512} width={512} className="object-cover max-w-full rounded-md " />
+                        <div className="space-y-4 max-md:row-[1]">
                             <p className="text-muted-foreground">{di.description}</p>
                             <p className="text-2xl font-bold">{di.price}</p>
                             <div className="flex items-center space-x-2 text-muted-foreground">
