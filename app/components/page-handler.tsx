@@ -10,7 +10,11 @@ export function PageHandler() {
     const [page, setPage] = useState(2);
 
     const handleGoBack = () => {
-        setDish(null);
+        if (dish)
+            setDish((p) => {
+                if (p) p[1].image = undefined;
+                return p;
+            });
         setPage((p) => {
             return p + 1 >= 3 ? p : p + 1;
         });
