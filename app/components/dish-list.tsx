@@ -1,8 +1,10 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Menu } from "@/lib/menu";
 import { DishInfo, DishName } from "@/types/dish";
+import { Trash } from "lucide-react";
 import Image from "next/image";
 import { MutableRefObject, useState } from "react";
 
@@ -15,14 +17,19 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
     const [searchTerm, setSearchTerm] = useState("");
     return (
         <>
-            <Input
-                ref={searchRef}
-                type="search"
-                placeholder="Искать..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="mb-4"
-            />
+            <div className="relative" onClick={() => searchRef.current?.focus()}>
+                <Input
+                    ref={searchRef}
+                    type="search"
+                    placeholder="Искать..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="mb-4"
+                />
+                <Button variant={"secondary"} className="absolute right-4 top-1/2 -translate-y-1/2 h-3/4" onClick={() => setSearchTerm("")}>
+                    <Trash />
+                </Button>
+            </div>
             <ul className="space-y-6">
                 {Object.entries(Menu)
                     .filter(([dn, di]) => {
