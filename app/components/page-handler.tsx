@@ -10,7 +10,10 @@ export function PageHandler() {
     const [page, setPage] = useState(2);
 
     const handleGoBack = () => {
-        setPage((p) => (p + 1 >= 3 ? p : p + 1));
+        setDish(null);
+        setPage((p) => {
+            return p + 1 >= 3 ? p : p + 1;
+        });
     };
 
     const handleGoForward = () => {
