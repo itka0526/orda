@@ -22,6 +22,7 @@ export const Menu: Dish = {
         weight: "250/30 Гр",
         price: "980 Р",
         ingredients: ["Сыр Сулугуни", "Сыр Маасдам", "Сыр Гауда", "Виноград п/ф", "Грецкий орех", "Миндаль орех", "Мёд п/ф"],
+        image: "/35.png",
         ETP: 10,
         tags: ["закуска"],
     },
@@ -88,6 +89,7 @@ export const Menu: Dish = {
         price: "1280 Р",
         ETP: 15,
         ingredients: [],
+        image: "/37.png",
         tags: ["закуска"],
     },
     САЛАМАТ: {
@@ -165,6 +167,7 @@ export const Menu: Dish = {
         price: "960 Р",
         ETP: 0,
         ingredients: [],
+        image: "/39.png",
         tags: ["закуска"],
     },
     "САЛАТ ОТ ШЕФА": {
@@ -174,6 +177,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["салаты"],
+        image: "/42.png",
     },
     "САЛАТ ОЛИВЬЕ С КУРИЦЕЙ": {
         description: "",
@@ -217,6 +221,7 @@ export const Menu: Dish = {
         price: "550 Р",
         ETP: 0,
         ingredients: [],
+        image: "/31.png",
         tags: ["салаты"],
     },
     "«ЗЕЛЕНЫЙ»": {
@@ -226,6 +231,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["салаты"],
+        image: "/43.png",
     },
     "САЛАТ С БАЙКАЛЬСКОЙ РЫБОЙ С ЗАПЕЧЕННЫМ АПЕЛЬСИНОМ И ОВОЩАМИ ПОД ФИРМЕННЫМ СОУСОМ": {
         weight: "180 ГР",
@@ -234,6 +240,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["салаты"],
+        image: "/41.png",
     },
     "САЛАТ С СЕМГОЙ": {
         description: "Аппетитный салат с малосольной семгой и картофелем «Айдахо», заправленный азиатским соусом",
@@ -294,6 +301,7 @@ export const Menu: Dish = {
             "Зелень п/ф",
         ],
         ETP: 10,
+        image: "/38.png",
         tags: ["салаты"],
     },
     "ЦЕЗАРЬ С КУРИНОЙ ГРУДКОЙ СУ-ВИД": {
@@ -303,6 +311,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["салаты"],
+        image: "/40.png",
     },
     "САЛАТ ИЗ ГОВЯЖЬЕЙ ВЫРЕЗКИ": {
         description: "Вырезка, болгарский перец, огурец, лайм, лист салата, имбирный соус",
@@ -353,7 +362,7 @@ export const Menu: Dish = {
         ],
         image: "/9.png",
         ETP: 15,
-        tags: ["cупы"],
+        tags: ["супы"],
     },
     "КРЕМ-СУП ГРИБНОЙ": {
         weight: "280 Гр",
@@ -375,8 +384,9 @@ export const Menu: Dish = {
             "Гренки на Цезарь п/ф",
             "Кедровый орех",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
         ETP: 15,
+        image: "/44.png",
     },
     "ТЫКВЕННЫЙ КАРРИ": {
         description: "Сытный и густой суп с насыщенным вкусом тыквы и карри",
@@ -401,7 +411,7 @@ export const Menu: Dish = {
             "Чеснок п/ф",
             "Зелень п/ф",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
         ETP: 15,
         image: "/25.png",
     },
@@ -418,7 +428,7 @@ export const Menu: Dish = {
             "Перец черный молотый",
             "Зелень п/ф",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
         ETP: 10,
         image: "/26.png",
     },
@@ -435,9 +445,9 @@ export const Menu: Dish = {
             "Зелень п/ф",
             "Бульон из баранины п/ф",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
         ETP: 10,
-        image: "/26.png",
+        image: "/48.png",
     },
     ДОТУР: {
         description: "Домашний суп-лапша из бараньих онутренностей",
@@ -452,8 +462,9 @@ export const Menu: Dish = {
             "Перец черный молотый",
             "Зелень п/ф",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
         ETP: 10,
+        image: "/45.png",
     },
     "СУП «ЧИНГИСХАН»": {
         description: "Традиционный суп бурят-монгольской кухни на совяжьем бульоне с пельменями банш, кусочками гобядины.",
@@ -469,7 +480,8 @@ export const Menu: Dish = {
             "Зелень п/с",
             "Лук репчатый очищенный п/ф",
         ],
-        tags: ["cупы"],
+        tags: ["супы"],
+        image: "/46.png",
     },
     "ОРООХОТОЙ ШУЛЭН": {
         description: "Деревенский суп на костном говяжьем бульоне с мясом и зернами пшеницы",
@@ -477,7 +489,8 @@ export const Menu: Dish = {
         price: "520 Р",
         ETP: 0,
         ingredients: [],
-        tags: ["cупы"],
+        tags: ["супы"],
+        image: "/47.png",
     },
     "СУП «СТЕПНОЙ»": {
         description: "Суп с бараньими фрикадельками, рваной домашней лапшой и черемшой",
@@ -485,7 +498,7 @@ export const Menu: Dish = {
         price: "760 Р",
         ETP: 0,
         ingredients: [],
-        tags: ["cупы"],
+        tags: ["супы"],
     },
     БАНТАН: {
         description: "Монгольский мучной суп с кусочками мяса и зеленью",
@@ -494,7 +507,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         image: "/10.png",
-        tags: ["cупы"],
+        tags: ["супы"],
     },
     БУХЛЁОР: {
         description: "Традиционный бурятский суп из баранины с картофелем, морковью и зеленью",
@@ -503,7 +516,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         image: "/11.png",
-        tags: ["cупы"],
+        tags: ["супы"],
     },
     'СУП "ХАНСКИЙ"': {
         description:
@@ -532,7 +545,7 @@ export const Menu: Dish = {
         ],
         ETP: 15,
         image: "/12.png",
-        tags: ["cупы"],
+        tags: ["супы"],
     },
     "РУБЛЕННЫЕ БУУЗЫ 3Ш": {
         price: "490 Р",
@@ -856,6 +869,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["горячие блюда на компанию"],
+        image: "/49.png",
     },
     "БАРАНИНА ОСТРАЯ С ДОЛЬКАМИ ОБЖАРЕННОГО КАРТОФЕЛЯ": {
         description: "",
@@ -872,6 +886,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["горячие блюда на компанию"],
+        image: "/50.png",
     },
     "АССОРТИ «НУХЭР»": {
         description: "Оленина на шпажке, запеченная куриная грудка и сочные свиные медальоны с картофельными дольками и аджикой",
@@ -996,6 +1011,7 @@ export const Menu: Dish = {
         ETP: 0,
         ingredients: [],
         tags: ["соусы"],
+        image: "/36.png",
     },
     "КЕДРОВАЯ ШИШКА": {
         description: "Нежное муссовое пирожное на сливочной основе с начинкой из брусничного желе и молочного крема с цельными кедровыми орешками",
@@ -1003,6 +1019,7 @@ export const Menu: Dish = {
         price: "430 Р",
         ETP: 0,
         ingredients: [],
+        image: "/33.jpeg",
         tags: ["десерты"],
     },
     "ПИРОЖНОЕ ПЛОМБИР ИЗ КУМЫСА С БРУСНИЧНЫМ МУССОМ И КЕДРОВЫМ ПРАЛИНЕ": {
@@ -1010,6 +1027,7 @@ export const Menu: Dish = {
         weight: "150 ГР",
         price: "560 Р",
         ETP: 0,
+        image: "/32.png",
         ingredients: [],
         tags: ["десерты"],
     },
@@ -1019,6 +1037,7 @@ export const Menu: Dish = {
         price: "500 P",
         ETP: 0,
         ingredients: [],
+        image: "/34.png",
         tags: ["десерты"],
     },
     "ТОРТ ЧЕРЕМУХОВЫЙ С БРУСНИЧНЫМ МУССОМ": {
