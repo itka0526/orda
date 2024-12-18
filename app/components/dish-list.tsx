@@ -21,7 +21,7 @@ export function DishList({ searchRef, handleDishClick }: DishListProps) {
                 <Input
                     ref={searchRef}
                     type="search"
-                    placeholder="Искать..."
+                    placeholder="#закуска, салаты, супы, горячие блюда, горячие блюда на компанию, гарниры и блюда из овощей, соусы, десерты"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="mb-4"
